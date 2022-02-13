@@ -16,16 +16,37 @@
 // const targetMember = 'name';
 // person[targetMember.value] = 'Dong''
 
+//Bind this
 
-const person = {
-  name: "Beans",
-  walk() {
-    console.log(this); // 
-  }
-};
+// const person = {
+//   name: "Beans",
+//   walk() {
+//     console.log(this); // 
+//   }
+// };
 
-person.walk();
+// person.walk();
 
-// const walk = person.walk(); Does not work
-const walk = person.walk.bind(person); //Using the bind method will return a new instance of the walk function 
-walk();
+// // const walk = person.walk(); Does not work
+// const walk = person.walk.bind(person); //Using the bind method will return a new instance of the walk function 
+// walk();
+
+
+
+// Arrow functions 
+
+// const square = number =>number * number;
+// console.log(square(12))
+
+
+const jobs = [
+  { id: 1, isActive: true },
+  { id: 2, isActive: true },
+  { id: 3, isActive: false },
+]
+
+// Predicate function
+// const activeJobs = jobs.filter(function(job) { return job.isActive; })
+
+// es6 arrows
+const activeJobs = jobs.filter(job => job.isActive);
