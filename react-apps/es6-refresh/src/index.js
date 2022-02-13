@@ -20,6 +20,12 @@
 const person = {
   name: "Beans",
   walk() {
-    console.log(this);
+    console.log(this); // 
   }
 };
+
+person.walk();
+
+// const walk = person.walk(); Does not work
+const walk = person.walk.bind(person); //Using the bind method will return a new instance of the walk function 
+walk();

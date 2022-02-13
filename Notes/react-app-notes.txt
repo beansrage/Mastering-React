@@ -1,5 +1,5 @@
 
-This is an example of JSX(Javascript XML):
+This is an example of JSX(JavaScript XML):
 
     <div className="App">
       <header className="App-header">
@@ -19,3 +19,8 @@ This is an example of JSX(Javascript XML):
 
 
 Babel compiles JSX code into calls to react
+- Only use npm eject if you know whats going down
+
+Backend is built in Complete node.js course
+- Strict mode is enabled by default
+  - strict js code

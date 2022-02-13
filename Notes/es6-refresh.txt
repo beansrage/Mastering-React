@@ -1,0 +1,25 @@
+Course Structuring:
+    - Js
+    - Components
+    - Tables 
+    - Forms
+    - Routing
+    - HTTP Services 
+    - Auth 
+    - Deployment
+
+
+
+JavaScript:
+    - JS basics for beginners
+    - Oop programming in JS
+
+
+
+When a variables is declared with the "var" keyword. That variable is accessible inside the function it is defined. 
+    var -> function
+
+When a variable is declared with the "let" keyword. That variable is ONLY accessible inside of that block 
+    let -> block
+
+    const -> block
