@@ -1,32 +1,32 @@
-// Example of arrow function 
+Example of arrow function 
 
     const square = (number) => {      
       return number * number;
     }
 
-// With a single parameter, the () can be dropped
+With a single parameter, the () can be dropped
 
     const square = number => {      
       return number * number;
     }
 
-// Zero parameters
+Zero parameters
 
     const square = () => {      
       return number * number;
     } 
 
-// Single parameter and if the function contains a single lineAND returns a value
+Single parameter and if the function contains a single lineAND returns a value
 
     const square = number =>number * number;
 
-// Final Result
+Final Result
 
     const square = number => number * number;
     console.log(square(12))
 
 
-// Predicate function
+Predicate function
 
     const activeJobs = jobs.filter(function(job) { return job.isActive; })
 

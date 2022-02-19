@@ -39,14 +39,80 @@
 // console.log(square(12))
 
 
-const jobs = [
-  { id: 1, isActive: true },
-  { id: 2, isActive: true },
-  { id: 3, isActive: false },
-]
+// const jobs = [
+//   { id: 1, isActive: true },
+//   { id: 2, isActive: true },
+//   { id: 3, isActive: false },
+// ]
 
-// Predicate function
-// const activeJobs = jobs.filter(function(job) { return job.isActive; })
+// // Predicate function
+// // const activeJobs = jobs.filter(function(job) { return job.isActive; })
 
-// es6 arrows
-const activeJobs = jobs.filter(job => job.isActive);
+// // es6 arrows
+// const activeJobs = jobs.filter(job => job.isActive);
+
+
+// ------------------- // 
+//7. Arrow Functions and this
+// ------------------- // // ------------------- // // ------------------- // // ------------------- // // ------------------- // 
+
+// // This is a callback function
+// const person = {
+//   talk() {
+//     setTimeout(function() {   // STANDALONE function
+//       console.log('this', this);
+//     }, 1000); // setTimeout will execute the function, After the amount of time provided
+//   }
+// };
+
+// person.talk(); // Returns window
+
+
+// // - OLD days pattern (Using Arrow functions this is no longer needed)
+
+// const person = {
+//   talk() {
+//     var self = this;
+//     setTimeout(function() {   // STANDALONE function
+//       console.log('self', self);
+//     }, 1000); // setTimeout will execute the function, After the amount of time provided
+//   }
+// };
+
+// person.talk();
+
+
+
+// // - Arrow functions dont re-bind this keyword. If call back function is changed from to ES6. It will inherit this keyword.
+
+// const person = {
+//   talk() {
+//     var self = this;
+//     setTimeout(() => {   // STANDALONE function
+//       console.log('this', this);
+//     }, 1000); // setTimeout will execute the function, After the amount of time provided
+//   }
+// };
+// ------------------- // // ------------------- // // ------------------- // // ------------------- // // ------------------- // 
+// ------------------- // // ------------------- // // ------------------- // // ------------------- // // ------------------- // 
+
+
+// ------------------- // 
+//8. Array.map
+// ------------------- // // ------------------- // // ------------------- // // ------------------- // // ------------------- // 
+
+// To render a list of items, use .map()
+
+// const colors = ['red', 'green', 'blue']
+// const items = colors.map(function(color) {
+//   return '<li>' + color + '</li>'
+// });
+
+// // Con-cat
+// const colors = ['red', 'green', 'blue']
+// const items = colors.map(color => '<li>' + color + '</li>');
+
+//ES6 Template Literal
+const colors = ['red', 'green', 'blue']
+const items = colors.map(color => `<li>${color}</li>`);
+console.log(items)
