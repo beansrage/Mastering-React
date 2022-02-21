@@ -248,6 +248,7 @@
 /* 
 - Write code in multiple files
 - Default is set to private
+- Add export before class to make class public
 
 person.js
 
@@ -282,6 +283,18 @@ teacher.teach();
 
 
 // ------------------- // // ------------------- // //13. Named and default exports. ------------------- // // ------------------- // // ------------------- // 
-/*
-
+/* 
+- What is exported has a name
+- export function promote() {}
+- In JS a class is technically an object. Syntactic sugar over constructor functions. Functions are objects
+- export default class Teacher extends Person {}. Main thing exported from module
+- Curly brackets are also removed: import Teacher from "./Modules/teacher";
+- Default -> import ... from '';
+- Named -> import { ... } from '';
+- Almost all react apps contain imports: import React, { Component } from 'react';
 */
+
+import  Teacher, { promote }  from "./Modules/teacher";
+
+const teacher = new Teacher ("Bean", "SE");
+teacher.teach();
